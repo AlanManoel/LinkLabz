@@ -1,42 +1,82 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+@import "tailwindcss";
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@layer base {
+  :root {
+    --white-1: #F3F4FC;
+    --orange-1: #FF6424;
+    --black-4: #4C4D56;
   }
-  to {
-    transform: rotate(360deg);
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--white-1);
+    font-family: "Poppins", sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h4 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 40px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@layer utilities {
+  .navigation-regular {
+    font-size: 20px;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .link-animado {
+    transition: all 0.3s ease-in-out;
+  }
 
-.read-the-docs {
-  color: #888;
+  .link-animado:hover {
+    color: var(--orange-1);
+    transform: scale-105;
+  }
+
+  .color-black-4 {
+    color: var(--black-4)
+  }
+
+  .a-bold {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .btn-fade {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+
+  .btn-fade:hover {
+    opacity: 1;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 15s linear infinite;
+  }
 }
