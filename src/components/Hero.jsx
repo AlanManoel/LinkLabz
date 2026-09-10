@@ -1,8 +1,9 @@
-import Button from "./button/Button";
+
+import {Button} from "./button/Button"
 import { IoIosArrowForward } from "react-icons/io";
 
 
-function Hero() {
+export const Hero = () => {
     return (
         <div className="flex flex-col h-[calc(100vh-88px)] justify-center items-center gap-6">
             <h3 className="color-black-4">SOLUÇÕES WEB E MOBILE SOB MEDIDA</h3>
@@ -12,5 +13,3 @@ function Hero() {
         </div>
     )
 }
-
-export default Hero;
