@@ -4,7 +4,8 @@ import './App.css'
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { About } from './components/about'
-import {Marquee} from './components/MarqueeServices'
+import { Marquee } from './components/MarqueeServices'
+import { Services } from './components/Services'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -12,5 +13,6 @@ createRoot(document.getElementById('root')).render(
     <Hero />
     <Marquee />
     <About />
+    <Services />
   </StrictMode>,
 )
